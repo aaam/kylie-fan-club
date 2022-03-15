@@ -5,7 +5,7 @@ items:
   kind: DeploymentConfig
   metadata:
     labels:
-      app: kylie-fan-club
+      app: kyliefc
       app.kubernetes.io/component: kylie-fan-club
       app.kubernetes.io/instance: kylie-fan-club
     name: kylie-fan-club
@@ -43,7 +43,7 @@ items:
   kind: ImageStream
   metadata:
     labels:
-      app: kylie-fan-club
+      app: kyliefc
       app.kubernetes.io/component: kylie-fan-club
       app.kubernetes.io/instance: kylie-fan-club
     name: kylie-fan-club
@@ -51,13 +51,13 @@ items:
   kind: Route
   metadata:
     labels:
-      app: kylie-fan-club
+      app: kyliefc
       app.kubernetes.io/component: kylie-fan-club
       app.kubernetes.io/instance: kylie-fan-club
     name: kylie-fan-club
   spec:
     port:
-      targetPort: 8080-tcp
+      targetPort: 8443-tcp
     tls:
       termination: edge
     to:
